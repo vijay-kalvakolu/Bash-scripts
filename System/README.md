@@ -7,5 +7,5 @@ sudo chmod +x /usr/local/bin/yourscript.sh
 
 # Schedule with Cron Jobs:
 sudo crontab -e
-* * * * * /usr/local/bin/network_monitor.sh
+ * * * * * /usr/local/bin/network_monitor.sh
 
