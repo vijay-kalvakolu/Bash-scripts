@@ -79,8 +79,3 @@ for target in "${TARGETS[@]}"; do
     fi
 done
 
-# Configuration: You define the TARGETS you want to monitor at the top of the script. This is the only section you should need to edit
-# State Management : The script creates an empty "state file" in /tmp/network_monitor_state/ for any target that is down.
-# When a check fails, it looks for this file. If the file isn't there, it knows the target just went down, logs an alert, and creates the file.
-# When a check succeeds, it looks for this file. If the file is there, it knows the target just came back up, logs a recovery message, and deletes the file.
-# Logging: All status changes are logged to /var/log/network_monitor.log and sent to the system's main log (journalctl or /var/log/syslog) for centralized viewing and potential integration with other monitoring tools

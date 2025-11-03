@@ -57,21 +57,3 @@ for service in "${SERVICES[@]}"; do
         fi
     fi
 done
-
-# ===============================================================================
-# --- HOW TO USE THE SCRIPT ---
-# sudo chmod +x /usr/local/bin/service_monitor.sh (make the file executable)
-
-# create the log file and set appropriate permissions so the script can write to it.
-# Inittial Log file setup: sudo touch /var/log/service_monitor.log 
-# Log file permissions: sudo chown $(whoami):$(whoami) /var/log/service_monitor.log # Or a dedicated user
-
-# ================================================================================
-
-# To run the script periodcially use crontab
-# sudo crontab -e
-# */5 * * * * /usr/local/bin/service_monitor.sh
-
-# Check the Logs
-# check the log status on  tail -f /var/log/service_monitor.log
-# System logs : journalctl -f -p warning | grep ServiceMonitor
